@@ -30,8 +30,6 @@ clear_mappings = input("Do you want to erase all existing stubs in this APIs ( y
 if clear_mappings.lower() == 'y':
     confirm_clear = input("*** Are you sure ( y or [n] )? *** ") or 'n'
     if confirm_clear.lower() == 'y':
-        #<TODO: Clear all mappings from WMC MockAPI>
-        print("Deleting them")
         delete_response = requests.delete(mockapi_url, headers=headers)
         if delete_response.status_code == 200:
             print("All existing stubs have been deleted from the WireMock Cloud mock API.")
