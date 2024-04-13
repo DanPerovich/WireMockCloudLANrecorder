@@ -95,6 +95,8 @@ import_response = requests.post(import_url, headers=headers, json=export_respons
 
 if import_response.status_code == 200:
     print("Recorded stubs imported to WireMock Cloud successfully.")
+    print("Exiting...")
+    print("")
 else:
     print("Failed to import recorded stubs. Response code was " + str(import_response.status_code) + ". Exiting.")
     exit()

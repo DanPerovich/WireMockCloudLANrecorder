@@ -25,6 +25,4 @@ COPY wiremockcloudLANrecorder.py /app/
 RUN pip3 install requests
 
 # Start WireMock standalone server and run the Python script when the container starts
-#CMD ["sh", "-c", "java -jar wiremock-standalone-3.5.2.jar --port 8080 --root-dir /app/mappings & sleep(3) & python3 wiremockcloudLANrecorder.py"]
-#CMD ["sh", "-c", "java -jar wiremock-standalone-3.5.2.jar --port 8080 --root-dir /app/mapping"]
 CMD /app/start.sh
