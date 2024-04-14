@@ -16,5 +16,8 @@ This utility is used to record internal network dependencies that cannot be reac
    - `https://api.github.com` becomes `http://localhost:8080`
    - `https://10.34.16.134:5732/open_api/balancing_energy/v1` becomes `http://localhost:8080/open_api/balancing_energy/v1`
 
+4. Send traffic from the consumer through the utility
+5. Hit any key in the utility to stop the recorder and upload the results to your WireMockCloud mock API.
+
 ### Building the Docker Image
 `docker build -t wiremockcloudlanrec .`
