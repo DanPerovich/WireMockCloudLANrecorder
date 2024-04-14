@@ -9,7 +9,7 @@ RUN apk update \
 WORKDIR /app
 
 # Copy the WireMock standalone JAR file into the container
-COPY wiremock-standalone-3.5.2.jar /app/
+RUN curl -o /app/wiremock-standalone-3.5.2.jar "https://repo1.maven.org/maven2/org/wiremock/wiremock-standalone/3.5.2/wiremock-standalone-3.5.2.jar"
 COPY start.sh /app/
 
 # Expose port 8080 for WireMock
