@@ -3,11 +3,11 @@ import requests
 print("")
 
 # Ask user for WireMock Cloud API key
-api_key = input("Enter your WireMock Cloud API key: ") or '9218507cce21de6587e427013db2001b'
+api_key = input("Enter your WireMock Cloud API key: ")
 headers = {"Authorization": "Token " + api_key}
 
 # Ask user for WireMock Cloud API name
-api_name = input("Enter your WireMock Cloud API name: ") or 'petproject2'
+api_name = input("Enter your WireMock Cloud API name: ")
 
 # Check if MockAPI exists
 mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/mappings"
@@ -42,7 +42,7 @@ else:
     print("Existing stubs will NOT be removed.")
 
 # Ask user for the target URL prefix to record
-target_url_prefix = input("Enter the target URL prefix to record (ex: https://api.github.com): ") or 'https://api.github.com'
+target_url_prefix = input("Enter the target URL prefix to record (ex: https://api.github.com): ")
 
 # Reset all mappings in local recorder
 reset_mappings_url = f"http://localhost:8080/__admin/mappings"
