@@ -10,7 +10,6 @@ headers = {"Authorization": "Token " + api_key}
 api_name = input("Enter your WireMock Cloud API name: ")
 
 # Check if MockAPI exists
-#mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/mappings"
 mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/requests"
 
 try:
