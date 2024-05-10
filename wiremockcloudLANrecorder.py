@@ -10,7 +10,8 @@ headers = {"Authorization": "Token " + api_key}
 api_name = input("Enter your WireMock Cloud API name: ")
 
 # Check if MockAPI exists
-mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/mappings"
+#mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/mappings"
+mockapi_url = f"https://{api_name}.wiremockapi.cloud/__admin/requests"
 
 try:
     mockapi_response = requests.get(mockapi_url, headers=headers)
@@ -30,7 +31,8 @@ clear_mappings = input("Do you want to erase all existing stubs in this APIs ( y
 if clear_mappings.lower() == 'y':
     confirm_clear = input("*** Are you sure ( y or [n] )? *** ") or 'n'
     if confirm_clear.lower() == 'y':
-        delete_response = requests.delete(mockapi_url, headers=headers)
+        delete_url = f"https://{api_name}.wiremockapi.cloud/__admin/mappings"
+        delete_response = requests.delete(delete_url, headers=headers)
         if delete_response.status_code == 200:
             print("All existing stubs have been deleted from the WireMock Cloud mock API.")
         else:
