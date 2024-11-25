@@ -4,7 +4,7 @@ This utility is used to record internal network dependencies that cannot be reac
 ## Requirements:
 - Docker
 - Existing WireMock Cloud account
-- Your WireMockCloud account API Token, found at <https://app.wiremock.cloud/account/api>
+- Your WireMockCloud account API Token, found at <https://app.wiremock.cloud/account/security>
 - The cname (ex. https://`q9l5g`.wiremockapi.cloud or https://`academy`.wiremockapi.cloud ) of an existing WireMock Cloud mock API
 
 ### Runing the utility
